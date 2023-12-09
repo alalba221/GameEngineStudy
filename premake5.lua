@@ -1,21 +1,21 @@
 -- premake5.lua
 include "Dependencies.lua"
 
-workspace "AlalbaEngine"
+workspace "Alalba"
    architecture "x64"
    configurations { "Debug", "Release", "Dist" }
    targetdir "build"
  
-   startproject "Sandbox"
+   startproject "sandbox"
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 
 group "Dependencies"
-include "AlalbaEngine/vendor/GLFW"
-include "AlalbaEngine/vendor/imgui-docking"
+include "engine/3rdparty/GLFW"
+include "engine/3rdparty/imgui-docking"
 group ""
 
 
-include "AlalbaEngine"
-include "Sandbox"
-include "RayTracer"
+include "engine"
+include "sandbox"
+-- include "RayTracer"

@@ -18,10 +18,10 @@ public:
 		
 	}
 
-	//virtual void Tick() override
-	//{
-
-	//}
+	virtual void Tick() override
+	{
+		
+	}
 
 	//virtual void Init() override
 	//{

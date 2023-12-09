@@ -26,7 +26,7 @@
 #include <cstdint> // Necessary for uint32_t
 #include <limits> // Necessary for std::numeric_limits
 #include <algorithm> // Necessary for std::clamp
-#include "AlalbaEngine/Core/Log.h"
-#include "AlalbaEngine/Core/Base.h"
+//#include "AlalbaEngine/Core/Log.h"
+//#include "AlalbaEngine/Core/Base.h"
 
 #include <chrono>

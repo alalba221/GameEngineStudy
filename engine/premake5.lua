@@ -1,4 +1,4 @@
-project "AlalbaEngine"
+project "Engine"
 	kind "StaticLib"
 	--kind "SharedLib"
 
@@ -10,19 +10,19 @@ project "AlalbaEngine"
 	objdir ("%{wks.location}/bin-int/" .. outputdir .. "/%{prj.name}")
 
 	pchheader "pch.h"
-	pchsource "src/pch.cpp"
+	pchsource "source/pch.cpp"
 
 	files
 	{
-		"src/**.h",
-		"src/**.cpp",
+		"source/**.h",
+		"source/**.cpp",
 		
-		"vendor/glm/glm/**.hpp",
-		"vendor/glm/glm/**.inl",
+		"3rdparty/glm/glm/**.hpp",
+		"3rdparty/glm/glm/**.inl",
 		-- "vendor/tiny_obj_loader/tiny_obj_loader.h",
-		"vendor/VMA/include/**.h",
-		"vendor/VMA/include/**.cpp",
-		"%{prj.location}/src/%{prj.name}/Shaders/**",
+		"3rdparty/VMA/include/**.h",
+		"3rdparty/VMA/include/**.cpp",
+		--"%{prj.location}/src/%{prj.name}/Shaders/**",
 	}
 
 	defines
@@ -38,8 +38,8 @@ project "AlalbaEngine"
 
 	includedirs
 	{
-		"src",
-		"src/pch",
+		"source",
+		"source/pch",
 		--"%{IncludeDir.Assimp}",
 		"%{IncludeDir.spdlog}",
 		"%{IncludeDir.GLFW}",
@@ -55,8 +55,8 @@ project "AlalbaEngine"
 
 	links
 	{
-		"GLFW",
-		"ImGui",
+		-- "GLFW",
+		-- "ImGui",
 		"%{Library.Vulkan}",
 	}
 
